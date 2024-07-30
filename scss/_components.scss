@@ -1,0 +1,97 @@
+@import 'variables';
+
+.button {
+  display: inline-block;
+  padding: map-get($spacings, 2) map-get($spacings, 4);
+  font-family: $font-family-base;
+  font-size: map-get($font-sizes, base);
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  color: map-get($colors, white);
+  transition: background-color 0.3s ease;
+  &.primary {
+    background-color: map-get($colors, primary);
+    &:hover {
+      background-color: darken(map-get($colors, primary), 10%);
+    }
+  }
+  &.secondary {
+    background-color: map-get($colors, secondary);
+    &:hover {
+      background-color: darken(map-get($colors, secondary), 10%);
+    }
+  }
+  &.danger {
+    background-color: map-get($colors, danger);
+    &:hover {
+      background-color: darken(map-get($colors, danger), 10%);
+    }
+  }
+}
+
+.form-group {
+  margin-bottom: map-get($spacings, 4);
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: map-get($spacings, 2) map-get($spacings, 3);
+  font-size: map-get($font-sizes, base);
+  line-height: 1.5;
+  color: map-get($colors, dark);
+  background-color: map-get($colors, white);
+  background-clip: padding-box;
+  border: 1px solid map-get($colors, gray);
+  border-radius: 0.25rem;
+  transition: border-color 0.3s ease;
+  &:focus {
+    border-color: map-get($colors, primary);
+    outline: none;
+  }
+}
+
+.card-header {
+  color: #343a40;
+  font-weight: bold;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: map-get($colors, dark);
+  border-collapse: collapse;
+
+  th, td {
+    padding: map-get($spacings, 2);
+    text-align: left;
+    border-top: 1px solid #dee2e6;
+  }
+
+  thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+  }
+
+  tbody + tbody {
+    border-top: 2px solid #dee2e6;
+  }
+
+  .table-primary {
+    background-color: map-get($colors, primary);
+    color: map-get($colors, white);
+  }
+
+  .table-secondary {
+    background-color: map-get($colors, secondary);
+    color: map-get($colors, black);
+  }
+
+  .table-danger {
+    background-color: map-get($colors, danger);
+    color: map-get($colors, white);
+  }
+}

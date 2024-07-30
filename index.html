@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Custom CSS Framework</title>
+  <style>
+    .navbar {
+      background-color: #343a40;
+      padding: 1rem;
+    }
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+    .hero {
+      background-color: #3490dc;
+      color: white;
+      padding: 5rem 1rem;
+      text-align: center;
+    }
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 0.25rem;
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+      margin-bottom: 1rem;
+      padding: 1rem;
+      background-color: white;
+    }
+    .card-header {
+      color: #343a40;
+      font-weight: bold;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .footer {
+      background-color: #343a40;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+    }
+    button {
+        color: white;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar d-flex justify-center">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+  <div class="hero">
+    <h1>Welcome to Our Custom CSS Framework</h1>
+    <p class="text-xl">Build responsive and modern web pages with ease.</p>
+  </div>
+  <div class="container mt-5 mb-5">
+    <section class="mb-5">
+      <h2 class="text-primary">Buttons</h2>
+      <button class="button primary">Primary Button</button>
+      <button class="button secondary">Secondary Button</button>
+      <button class="button danger">Danger Button</button>
+    </section>
+    <section class="mb-5">
+      <h2 class="text-primary">Form</h2>
+      <form>
+        <div class="form-group">
+          <label for="inputEmail">Email address</label>
+          <input type="email" class="form-control" id="inputEmail" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label for="inputPassword">Password</label>
+          <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+        </div>
+        <button type="submit" class="button primary">Submit</button>
+      </form>
+    </section>
+    <section class="mb-5">
+      <h2 class="text-primary">Cards</h2>
+      <div class="grid">
+        <div class="card">
+          <h3 class="card-header">Card 1</h3>
+          <p>This is a card with some content in it.</p>
+          <button class="button primary">Read More</button>
+        </div>
+        <div class="card">
+          <h3 class="card-header">Card 2</h3>
+          <p>This is another card with some content.</p>
+          <button class="button secondary">Read More</button>
+        </div>
+        <div class="card">
+          <h3 class="card-header">Card 3</h3>
+          <p>This card contains different content.</p>
+          <button class="button danger">Read More</button>
+        </div>
+      </div>
+    </section>
+    <section class="mb-5">
+      <h2 class="text-primary">Grid</h2>
+      <div class="d-flex">
+        <div class="p-3 m-2 bg-primary text-white">Flex Item 1</div>
+        <div class="p-3 m-2 bg-secondary text-black">Flex Item 2</div>
+        <div class="p-3 m-2 bg-danger text-white">Flex Item 3</div>
+      </div>
+    </section>
+    <section class="mb-5">
+        <h2 class="text-primary">Table</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+              <th>City</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="table-primary">John Doe</td>
+              <td>28</td>
+              <td>New York</td>
+            </tr>
+            <tr>
+              <td class="table-secondary">Jane Smith</td>
+              <td>34</td>
+              <td>San Francisco</td>
+            </tr>
+            <tr>
+              <td class="table-danger">Mike Johnson</td>
+              <td>45</td>
+              <td>Los Angeles</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+  </div>
+  <footer class="footer">
+    <p>Footer content goes here.</p>
+  </footer>
+</body>
+</html>

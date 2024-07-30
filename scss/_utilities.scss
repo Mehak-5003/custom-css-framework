@@ -1,0 +1,57 @@
+@import 'variables';
+
+// Generate utility classes for colors
+@each $name, $color in $colors {
+  .text-#{$name} {
+    color: $color;
+  }
+  .bg-#{$name} {
+    background-color: $color;
+  }
+}
+
+// Generate utility classes for spacing (margin and padding)
+@each $name, $spacing in $spacings {
+  .m-#{$name} { margin: $spacing !important; }
+  .mt-#{$name} { margin-top: $spacing !important; }
+  .mr-#{$name} { margin-right: $spacing !important; }
+  .mb-#{$name} { margin-bottom: $spacing !important; }
+  .ml-#{$name} { margin-left: $spacing !important; }
+
+  .p-#{$name} { padding: $spacing !important; }
+  .pt-#{$name} { padding-top: $spacing !important; }
+  .pr-#{$name} { padding-right: $spacing !important; }
+  .pb-#{$name} { padding-bottom: $spacing !important; }
+  .pl-#{$name} { padding-left: $spacing !important; }
+}
+
+// Generate utility classes for font sizes
+@each $name, $size in $font-sizes {
+  .text-#{$name} { font-size: $size; }
+}
+
+// Generate utility classes for font weights
+@each $name, $weight in $font-weights {
+  .font-#{$name} { font-weight: $weight; }
+}
+
+// Display utilities
+.d-block { display: block; }
+.d-inline { display: inline; }
+.d-inline-block { display: inline-block; }
+.d-flex { display: flex; }
+.d-none { display: none; }
+
+// Flexbox utilities
+.flex-row { flex-direction: row; }
+.flex-column { flex-direction: column; }
+.justify-start { justify-content: flex-start; }
+.justify-center { justify-content: center; }
+.justify-end { justify-content: flex-end; }
+.align-start { align-items: flex-start; }
+.align-center { align-items: center; }
+.align-end { align-items: flex-end; }
+
+// Width and height utilities
+.w-100 { width: 100%; }
+.h-100 { height: 100%; }

@@ -1,0 +1,36 @@
+@import 'variables';
+
+body {
+  font-family: $font-family-base;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: map-get($colors, light);
+  color: map-get($colors, dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: map-get($spacings, 3);
+  font-weight: map-get($font-weights, bold);
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: map-get($spacings, 3);
+}
+
+ul, ol {
+  margin-top: 0;
+  margin-bottom: map-get($spacings, 3);
+  padding-left: map-get($spacings, 5);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: map-get($spacings, 4);
+  background-color: map-get($colors, white);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+}
